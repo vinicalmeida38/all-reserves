@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff">
+
+
+    <View
+        android:id="@+id/view_background"
+        android:layout_width="411dp"
+        android:layout_height="171dp"
+        android:background="#363636"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button_pagina"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="135dp"
+        android:layout_height="61dp"
+        android:layout_marginTop="32dp"
+        android:text="Pagina"
+        android:textColor="#ffffff"
+        android:textSize="5pt"
+
+
+        app:backgroundTint="#4F4F4F"
+        app:layout_constraintEnd_toStartOf="@+id/button_reservas"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textview_nome_restaurante" />
+
+    <Button
+        android:id="@+id/button_reservas"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="135dp"
+        android:layout_height="61dp"
+        android:layout_marginTop="32dp"
+        android:text="Reservas"
+        android:textColor="#ffffff"
+        android:textSize="5pt"
+
+        app:backgroundTint="#4F4F4F"
+        app:layout_constraintEnd_toStartOf="@+id/button_propriedades"
+        app:layout_constraintStart_toEndOf="@+id/button_pagina"
+        app:layout_constraintTop_toBottomOf="@+id/textview_nome_restaurante" />
+
+    <Button
+        android:id="@+id/button_propriedades"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="135dp"
+        android:layout_height="61dp"
+        android:layout_marginTop="32dp"
+        android:text="Propriedades"
+        android:textColor="#ffffff"
+        android:textSize="5pt"
+
+
+        app:backgroundTint="#4F4F4F"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/button_reservas"
+        app:layout_constraintTop_toBottomOf="@+id/textview_nome_restaurante" />
+
+    <TextView
+        android:id="@+id/textview_nome_restaurante"
+        android:layout_width="413dp"
+        android:layout_height="54dp"
+        android:layout_marginStart="174dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="179dp"
+        android:gravity="center"
+        android:text="Nome Restaurante"
+        android:textColor="#ffffff"
+        android:textSize="15pt"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="118dp"
+        android:layout_height="36dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="278dp"
+        android:text="Imagem"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_pagina" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="248dp"
+        android:layout_marginBottom="11dp"
+        android:text="Dias de Funcionamento"
+        app:layout_constraintBottom_toTopOf="@+id/checkBox_segunda2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <CheckBox
+        android:id="@+id/checkBox_quinta2"
+        android:layout_width="90dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="12dp"
+        android:text="Quinta"
+        app:layout_constraintBottom_toTopOf="@+id/checkBox_domingo2"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <CheckBox
+        android:id="@+id/checkBox_domingo2"
+        android:layout_width="90dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="64dp"
+        android:layout_marginBottom="68dp"
+        android:text="Domingo"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <CheckBox
+        android:id="@+id/checkBox_sabado2"
+        android:layout_width="90dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="68dp"
+        android:text="Sabado"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/checkBox_domingo2"
+        app:layout_constraintStart_toEndOf="@+id/checkBox_sexta2" />
+
+    <CheckBox
+        android:id="@+id/checkBox_sexta2"
+        android:layout_width="90dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="65dp"
+        android:layout_marginBottom="68dp"
+        android:text="Sexta"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/checkBox_sabado2"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <CheckBox
+        android:id="@+id/checkBox_segunda2"
+        android:layout_width="90dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="12dp"
+        android:text="Segunda"
+        app:layout_constraintBottom_toTopOf="@+id/checkBox_sexta2"
+        app:layout_constraintEnd_toStartOf="@+id/checkBox_terca2"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <CheckBox
+        android:id="@+id/checkBox_terca2"
+        android:layout_width="90dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="12dp"
+        android:text="Terça"
+        app:layout_constraintBottom_toTopOf="@+id/checkBox_sexta2"
+        app:layout_constraintEnd_toStartOf="@+id/checkBox_quarta2" />
+
+    <CheckBox
+        android:id="@+id/checkBox_quarta2"
+        android:layout_width="90dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="12dp"
+        android:layout_marginBottom="12dp"
+        android:text="Quarta"
+        app:layout_constraintBottom_toTopOf="@+id/checkBox_domingo2"
+        app:layout_constraintEnd_toStartOf="@+id/checkBox_quinta2" />
+
+    <Button
+        android:id="@+id/button_salvar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="160dp"
+        android:layout_marginTop="11dp"
+        android:layout_marginEnd="160dp"
+        android:layout_marginBottom="10dp"
+        android:text="Salvar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/checkBox_sabado2" />
+
+    <Button
+        android:id="@+id/button_anexar"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="17dp"
+        android:layout_marginEnd="302dp"
+        android:layout_marginBottom="24dp"
+        android:text="Anexar"
+        app:layout_constraintBottom_toTopOf="@+id/textView4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="116dp"
+        android:layout_height="38dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginEnd="281dp"
+        android:text="Descrição"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <EditText
+        android:id="@+id/editText_descricao"
+        android:layout_width="369dp"
+        android:layout_height="134dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="10dp"
+        android:ems="10"
+        android:gravity="start|top"
+        android:inputType="textMultiLine"
+        app:layout_constraintBottom_toTopOf="@+id/textView3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.083"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView4"
+        app:layout_constraintVertical_bias="0.4"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
