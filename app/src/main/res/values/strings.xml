@@ -1,3 +1,16 @@
 <resources>
     <string name="app_name">AllReserves</string>
+    <string name="todo">TODO</string>
+    <string name="como_deseja_acessar_o_app">Como deseja acessar o app?</string>
+    <string name="cliente">Cliente</string>
+    <string name="restaurante">Restaurante</string>
+    <string name="todo">TODO</string>
+    <string name="todo">TODO</string>
+    <string name="entrar">Entrar</string>
+    <string name="cadastrar_se">Cadastrar-se</string>
+    <string name="nao_tem_conta">Nao tem conta?</string>
+    <string name="restaurante">Restaurante</string>
+    <string name="senha">Senha</string>
+    <string name="email">Email</string>
+    <string name="todo">TODO</string>
 </resources>
