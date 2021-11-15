@@ -3,14 +3,11 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Documentos/IFSP/PMD/all-reserves/app/src/main/res/layout/activity_lista_restaurantes.xml" value="0.2" />
         <entry key="..\:/Documentos/IFSP/PMD/all-reserves/app/src/main/res/layout/activity_main.xml" value="0.2015625" />
-        <entry key="..\:/Users/caios/Documents/FACULDADE/IFSP/5semestre/progMoveis/code/android/all-reserves/app/src/main/res/drawable/ic_launcher_background.xml" value="0.3828125" />
-        <entry key="..\:/Users/caios/Documents/FACULDADE/IFSP/5semestre/progMoveis/code/android/all-reserves/app/src/main/res/drawable/ic_search_black_24dp.xml" value="0.3828125" />
-        <entry key="..\:/Users/caios/Documents/FACULDADE/IFSP/5semestre/progMoveis/code/android/all-reserves/app/src/main/res/layout/activity_main.xml" value="0.28940217391304346" />
-        <entry key="..\:/Users/caios/Documents/FACULDADE/IFSP/5semestre/progMoveis/code/android/all-reserves/app/src/main/res/layout/tela_propriedades.xml" value="0.22" />
-        <entry key="..\:/Users/caios/Documents/FACULDADE/IFSP/5semestre/progMoveis/code/android/all-reserves/app/src/main/res/layout/tela_reservas.xml" value="0.33" />
-        <entry key="..\:/Users/caios/Documents/FACULDADE/IFSP/5semestre/progMoveis/code/android/all-reserves/app/src/main/res/layout/tela_restaurante.xml" value="0.33" />
-        <entry key="..\:/Users/caios/Documents/FACULDADE/IFSP/5semestre/progMoveis/code/android/all-reserves/app/src/main/res/menu/menu_tela_restaurante.xml" value="0.36666666666666664" />
+        <entry key="..\:/Documentos/IFSP/PMD/all-reserves/app/src/main/res/layout/fragment_lista_restaurantes.xml" value="0.21875" />
+        <entry key="..\:/Documentos/IFSP/PMD/all-reserves/app/src/main/res/layout/fragment_minhas_reservas.xml" value="0.21875" />
+        <entry key="..\:/Documentos/IFSP/PMD/all-reserves/app/src/main/res/layout/fragment_restaurantes.xml" value="0.21875" />
       </map>
     </option>
   </component>
