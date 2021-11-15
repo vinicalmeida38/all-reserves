@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AllReserves">
         <activity
-            android:name=".Login_"
+            android:name=".ListaRestaurantes"
             android:exported="true" />
         <activity
             android:name=".MainActivity"
