@@ -42,7 +42,10 @@
         android:textColor="@color/white"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/mensagem1" />
+        app:layout_constraintTop_toBottomOf="@+id/mensagem1"
+        android:onClick="proximaTela"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="-2dp"/>
 
     <Button
         android:id="@+id/button02"
