@@ -3,7 +3,11 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Documentos/IFSP/PMD/all-reserves/app/src/main/res/layout/activity_lista_restaurantes.xml" value="0.2" />
         <entry key="..\:/Documentos/IFSP/PMD/all-reserves/app/src/main/res/layout/activity_main.xml" value="0.2015625" />
+        <entry key="..\:/Documentos/IFSP/PMD/all-reserves/app/src/main/res/layout/fragment_lista_restaurantes.xml" value="0.21875" />
+        <entry key="..\:/Documentos/IFSP/PMD/all-reserves/app/src/main/res/layout/fragment_minhas_reservas.xml" value="0.21875" />
+        <entry key="..\:/Documentos/IFSP/PMD/all-reserves/app/src/main/res/layout/fragment_restaurantes.xml" value="0.21875" />
       </map>
     </option>
   </component>
