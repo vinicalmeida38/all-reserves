@@ -10,34 +10,37 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AllReserves">
         <activity
-            android:name=".CadastroRest2"
+            android:name=".telas.cliente.login.LoginCliente"
             android:exported="true" />
         <activity
-            android:name=".CadastroRestaurante"
+            android:name=".telas.restaurante.cadastro.CadastroRestaurante2"
             android:exported="true" />
         <activity
-            android:name=".DetalheRestaurante"
+            android:name=".telas.restaurante.cadastro.CadastroRestaurante"
             android:exported="true" />
         <activity
-            android:name=".ListaRestaurantes"
+            android:name=".telas.cliente.listagem.restaurantes.DetalheRestaurante"
             android:exported="true" />
         <activity
-            android:name=".Login"
+            android:name=".telas.cliente.listagem.restaurantes.ListaRestaurantes"
             android:exported="true" />
         <activity
-            android:name=".MainActivity"
+            android:name=".telas.restaurante.login.LoginRestaurante"
             android:exported="true" />
         <activity
-            android:name=".Reserva"
+            android:name=".telas.main.MainActivity"
             android:exported="true" />
         <activity
-            android:name=".TelaPropriedades"
+            android:name=".telas.cliente.listagem.reservas.Reserva"
             android:exported="true" />
         <activity
-            android:name=".TelaReservas"
+            android:name=".telas.restaurante.gerenciamento.TelaPropriedades"
             android:exported="true" />
         <activity
-            android:name=".TelaRestaurante"
+            android:name=".telas.restaurante.gerenciamento.TelaReservas"
+            android:exported="true" />
+        <activity
+            android:name=".telas.restaurante.gerenciamento.TelaRestaurante"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
