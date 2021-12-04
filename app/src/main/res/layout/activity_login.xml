@@ -5,15 +5,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#454545"
-    tools:context=".Login_">
+    tools:context=".Login">
 
     <ImageView
         android:id="@+id/imageView4"
         android:layout_width="288dp"
         android:layout_height="226dp"
         android:layout_marginTop="32dp"
-        android:layout_marginEnd="76dp"
-        android:contentDescription="@string/todo"
+        android:layout_marginEnd="48dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/logo_removebg_preview__1_"
@@ -23,20 +22,20 @@
         android:id="@+id/restaurante"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="192dp"
+        android:layout_marginEnd="160dp"
         android:text="@string/restaurante"
         android:textColor="@color/white"
         android:textColorLink="#FFFDFD"
-        android:textSize="20sp"
+        android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView4" />
 
     <EditText
         android:id="@+id/editTextTextEmailAddress"
-        android:layout_width="221dp"
+        android:layout_width="320dp"
         android:layout_height="48dp"
-        android:layout_marginTop="2dp"
-        android:layout_marginEnd="100dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="44dp"
         android:background="@color/white"
         android:ems="10"
         android:importantForAutofill="no"
@@ -49,11 +48,11 @@
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="35dp"
-        android:layout_marginEnd="343dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="320dp"
         android:text="@string/email"
         android:textColor="@color/white"
-        android:textSize="20sp"
+        android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView4" />
 
@@ -61,40 +60,43 @@
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="26dp"
-        android:layout_marginEnd="337dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="315dp"
         android:text="@string/senha"
         android:textColor="@color/white"
-        android:textSize="20sp"
+        android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextTextEmailAddress" />
 
     <EditText
         android:id="@+id/editTextTextPassword"
-        android:layout_width="219dp"
+        android:layout_width="320dp"
         android:layout_height="48dp"
-        android:layout_marginStart="88dp"
-        android:layout_marginBottom="16dp"
+        android:layout_marginEnd="44dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="8dp"
         android:background="@color/white"
         android:ems="10"
         android:importantForAutofill="no"
         android:inputType="textPassword"
         app:layout_constraintBottom_toTopOf="@+id/button03"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         tools:ignore="SpeakableTextPresentCheck" />
 
     <Button
         android:id="@+id/button03"
         android:layout_width="137dp"
-        android:layout_height="48dp"
+        android:layout_height="52dp"
         android:layout_marginStart="140dp"
         android:layout_marginEnd="203dp"
-        android:layout_marginBottom="51dp"
+        android:layout_marginBottom="36dp"
+        android:backgroundTint="#FFFFFF"
         android:text="@string/entrar"
-        android:textColor="@color/white"
-        android:textSize="20sp"
+        android:textColor="@color/black"
+        android:textSize="18sp"
         app:layout_constraintBottom_toTopOf="@+id/conta"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.043"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
@@ -106,9 +108,10 @@
         android:layout_marginBottom="28dp"
         android:text="@string/nao_tem_conta"
         android:textColor="@color/white"
-        android:textSize="20sp"
+        android:textSize="18sp"
         app:layout_constraintBottom_toTopOf="@+id/button04"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.202"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
@@ -118,10 +121,12 @@
         android:layout_marginStart="125dp"
         android:layout_marginEnd="155dp"
         android:layout_marginBottom="64dp"
+        android:backgroundTint="#FFFFFF"
         android:text="@string/cadastrar_se"
-        android:textColor="@color/white"
-        android:textSize="20sp"
+        android:textColor="@color/black"
+        android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.2"
         app:layout_constraintStart_toStartOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
