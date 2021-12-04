@@ -1,10 +1,13 @@
-package com.example.allreserves;
+package com.example.allreserves.telas.cliente.listagem;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.lifecycle.Lifecycle;
 import androidx.viewpager2.adapter.FragmentStateAdapter;
+
+import com.example.allreserves.telas.cliente.listagem.reservas.MinhasReservas;
+import com.example.allreserves.telas.cliente.listagem.restaurantes.Restaurantes;
 
 
 public class FragmentAdapter extends FragmentStateAdapter {

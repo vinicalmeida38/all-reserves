@@ -1,4 +1,4 @@
-package com.example.allreserves;
+package com.example.allreserves.telas.cliente.listagem.restaurantes;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentManager;
@@ -6,6 +6,8 @@ import androidx.viewpager2.widget.ViewPager2;
 
 import android.os.Bundle;
 
+import com.example.allreserves.telas.cliente.listagem.FragmentAdapter;
+import com.example.allreserves.R;
 import com.google.android.material.tabs.TabLayout;
 
 public class ListaRestaurantes extends AppCompatActivity {

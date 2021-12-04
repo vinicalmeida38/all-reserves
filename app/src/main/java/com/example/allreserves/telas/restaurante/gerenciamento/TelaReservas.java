@@ -1,7 +1,9 @@
-package com.example.allreserves;
+package com.example.allreserves.telas.restaurante.gerenciamento;
 
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
+
+import com.example.allreserves.R;
 
 public class TelaReservas extends AppCompatActivity{
 

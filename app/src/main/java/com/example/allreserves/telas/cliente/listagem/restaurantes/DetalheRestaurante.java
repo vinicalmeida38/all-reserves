@@ -1,8 +1,10 @@
-package com.example.allreserves;
+package com.example.allreserves.telas.cliente.listagem.restaurantes;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+
+import com.example.allreserves.R;
 
 public class DetalheRestaurante extends AppCompatActivity {
 

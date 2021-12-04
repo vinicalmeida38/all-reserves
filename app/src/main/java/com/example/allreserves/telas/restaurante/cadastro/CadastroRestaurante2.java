@@ -1,10 +1,12 @@
-package com.example.allreserves;
+package com.example.allreserves.telas.restaurante.cadastro;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-public class CadastroRest2 extends AppCompatActivity {
+import com.example.allreserves.R;
+
+public class CadastroRestaurante2 extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

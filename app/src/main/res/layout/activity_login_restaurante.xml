@@ -5,14 +5,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#454545"
-    tools:context=".Login">
+    tools:context=".telas.restaurante.login.LoginRestaurante">
 
     <ImageView
         android:id="@+id/imageView4"
-        android:layout_width="288dp"
-        android:layout_height="226dp"
-        android:layout_marginTop="32dp"
-        android:layout_marginEnd="48dp"
+        android:layout_width="228dp"
+        android:layout_height="134dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="92dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/logo_removebg_preview__1_"
@@ -48,13 +48,13 @@
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="36dp"
+        android:layout_marginTop="8dp"
         android:layout_marginEnd="320dp"
         android:text="@string/email"
         android:textColor="@color/white"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView4" />
+        app:layout_constraintTop_toBottomOf="@+id/restaurante" />
 
     <TextView
         android:id="@+id/textView3"
@@ -72,15 +72,14 @@
         android:id="@+id/editTextTextPassword"
         android:layout_width="320dp"
         android:layout_height="48dp"
-        android:layout_marginEnd="44dp"
-        android:layout_marginBottom="8dp"
         android:layout_marginTop="8dp"
+        android:layout_marginEnd="44dp"
         android:background="@color/white"
         android:ems="10"
         android:importantForAutofill="no"
         android:inputType="textPassword"
-        app:layout_constraintBottom_toTopOf="@+id/button03"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3"
         tools:ignore="SpeakableTextPresentCheck" />
 
     <Button
@@ -88,45 +87,45 @@
         android:layout_width="137dp"
         android:layout_height="52dp"
         android:layout_marginStart="140dp"
+        android:layout_marginTop="32dp"
         android:layout_marginEnd="203dp"
-        android:layout_marginBottom="36dp"
         android:backgroundTint="#FFFFFF"
         android:text="@string/entrar"
         android:textColor="@color/black"
         android:textSize="18sp"
-        app:layout_constraintBottom_toTopOf="@+id/conta"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.043"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword" />
 
     <TextView
         android:id="@+id/conta"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="143dp"
+        android:layout_marginTop="32dp"
         android:layout_marginEnd="195dp"
-        android:layout_marginBottom="28dp"
         android:text="@string/nao_tem_conta"
         android:textColor="@color/white"
         android:textSize="18sp"
-        app:layout_constraintBottom_toTopOf="@+id/button04"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.202"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintHorizontal_bias="0.223"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button03" />
 
     <Button
         android:id="@+id/button04"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="125dp"
+        android:layout_marginTop="12dp"
         android:layout_marginEnd="155dp"
-        android:layout_marginBottom="64dp"
         android:backgroundTint="#FFFFFF"
         android:text="@string/cadastrar_se"
         android:textColor="@color/black"
         android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.2"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/conta" />
 </androidx.constraintlayout.widget.ConstraintLayout>

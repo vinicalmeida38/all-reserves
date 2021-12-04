@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#2F2F2F"
-    tools:context=".DetalheRestaurante">
+    tools:context=".telas.cliente.listagem.restaurantes.DetalheRestaurante">
 
     <TextView
         android:id="@+id/textView15"
