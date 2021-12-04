@@ -2,4 +2,12 @@
     <string name="app_name">AllReserves</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="restaurante">Restaurante</string>
+    <string name="email">Email</string>
+    <string name="senha">Senha</string>
+    <string name="entrar">Entrar</string>
+    <string name="nao_tem_conta">Não tem uma conta?</string>
+    <string name="cadastrar_se">Cadastrar-se</string>
+    <string name="como_deseja_acessar_o_app">Como você deseja accessar o app?</string>
+    <string name="cliente">Cliente</string>
 </resources>

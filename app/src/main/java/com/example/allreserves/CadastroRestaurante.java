@@ -1,4 +1,4 @@
-package com.example.cadastrorestaurante;
+package com.example.allreserves;
 
 import androidx.appcompat.app.AppCompatActivity;
 

@@ -1,14 +1,14 @@
-package com.example.cadastrorestaurante;
+package com.example.allreserves;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-public class cadastroRest2 extends AppCompatActivity {
+public class Reserva extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_cadastro_rest2);
+        setContentView(R.layout.activity_reserva);
     }
 }
