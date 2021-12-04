@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#454545"
-    tools:context=".telas.restaurante.login.LoginRestaurante">
+    tools:context=".telas.cliente.login.LoginCliente">
 
     <ImageView
         android:id="@+id/imageView4"
@@ -124,6 +124,7 @@
         android:text="@string/cadastrar_se"
         android:textColor="@color/black"
         android:textSize="18sp"
+        android:onClick="acessarCadastroCliente"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.2"
         app:layout_constraintStart_toStartOf="parent"

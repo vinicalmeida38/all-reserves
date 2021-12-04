@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AllReserves">
         <activity
+            android:name=".telas.cliente.cadastro.CadastroCliente"
+            android:exported="true" />
+        <activity
             android:name=".telas.cliente.login.LoginCliente"
             android:exported="true" />
         <activity
