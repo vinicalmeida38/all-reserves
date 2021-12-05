@@ -23,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
-    public void acessarLoginCliente(View view){
+    public void acessarLoginRestaurante(View view){
         Intent intent = new Intent(this, com.example.allreserves.telas.cliente.login.LoginRestaurante.class);
         startActivity(intent);
     }
