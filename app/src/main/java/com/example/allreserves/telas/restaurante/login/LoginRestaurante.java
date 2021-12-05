@@ -38,8 +38,9 @@ public class LoginRestaurante extends AppCompatActivity {
         mAuth = FirebaseAuth.getInstance();
     }
 
-    private void acessarPropsRestaurantes() {
+    private void acessarPropsRestaurantes(String uid) {
         Intent intent = new Intent(this, TelaPropriedades.class);
+        intent.putExtra("uid",uid);
         startActivity(intent);
     }
 
@@ -58,7 +59,8 @@ public class LoginRestaurante extends AppCompatActivity {
                         if (task.isSuccessful()) {
                             // Sign in success, update UI with the signed-in user's information
                             Log.d(TAG, "signInWithEmail:success");
-                            acessarPropsRestaurantes();
+                            FirebaseUser user = mAuth.getCurrentUser();
+                            acessarPropsRestaurantes(user.getUid());
                         } else {
                             // If sign in fails, display a message to the user.
                             Log.w(TAG, "signInWithEmail:failure", task.getException());
