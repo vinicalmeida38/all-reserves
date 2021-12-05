@@ -8,11 +8,11 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import com.example.allreserves.R;
-import com.example.allreserves.classes.cliente.Cliente;
 import com.example.allreserves.telas.cliente.cadastro.CadastroCliente;
-import com.example.allreserves.telas.cliente.listagem.reservas.MinhasReservas;
+import com.example.allreserves.telas.cliente.listagem.restaurantes.ListaRestaurantes;
 import com.example.allreserves.telas.restaurante.login.LoginRestaurante;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -21,15 +21,17 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
 public class LoginCliente extends AppCompatActivity {
-
     private static final String TAG = "";
+    private EditText clienteEmailLogin;
+    private EditText clienteSenhaLogin;
     private FirebaseAuth mAuth;
-    private Cliente cliente;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login_cliente);
+        clienteEmailLogin = findViewById(R.id.clienteEmailLogin);
+        clienteSenhaLogin = findViewById(R.id.clienteSenhaLogin);
 
         mAuth = FirebaseAuth.getInstance();
     }
@@ -40,21 +42,15 @@ public class LoginCliente extends AppCompatActivity {
     }
 
     private void acessarListaRestaurantes(){
-        Intent intent = new Intent(this, MinhasReservas.class);
+        Intent intent = new Intent(this, ListaRestaurantes.class);
         startActivity(intent);
     }
 
-    public void loginCliente(View view){
-        EditText edt1 = (EditText)findViewById(R.id.editTextTextEmailAddress);
-        EditText edt2 = (EditText)findViewById(R.id.editTextTextPassword);
+    public void autenticarCliente(View view){
+        String email = clienteEmailLogin.getText().toString();
+        String senha = clienteSenhaLogin.getText().toString();
 
-        String email = edt1.getText().toString();
-        String pass = edt2.getText().toString();
-
-        cliente.setEmail(email);
-        cliente.setSenha(pass);
-
-        signUser(cliente.getEmail(),cliente.getSenha());
+        signUser(email, senha);
     }
 
     private void signUser(String email,String password) {
@@ -67,16 +63,13 @@ public class LoginCliente extends AppCompatActivity {
                             Log.d(TAG, "signInWithEmail:success");
                             FirebaseUser user = mAuth.getCurrentUser();
                             acessarListaRestaurantes();
-
-
                         } else {
                             // If sign in fails, display a message to the user.
                             Log.w(TAG, "signInWithEmail:failure", task.getException());
-
+                            Toast.makeText(LoginCliente.this, "Email ou senha incorretos.",
+                                    Toast.LENGTH_LONG).show();
                         }
                     }
                 });
     }
-
-
 }

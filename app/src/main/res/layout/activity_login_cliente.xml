@@ -31,7 +31,7 @@
         app:layout_constraintTop_toBottomOf="@+id/imageView4" />
 
     <EditText
-        android:id="@+id/editTextTextEmailAddress"
+        android:id="@+id/clienteEmailLogin"
         android:layout_width="320dp"
         android:layout_height="48dp"
         android:layout_marginTop="8dp"
@@ -66,10 +66,10 @@
         android:textColor="@color/white"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextEmailAddress" />
+        app:layout_constraintTop_toBottomOf="@+id/clienteEmailLogin" />
 
     <EditText
-        android:id="@+id/editTextTextPassword"
+        android:id="@+id/clienteSenhaLogin"
         android:layout_width="320dp"
         android:layout_height="48dp"
         android:layout_marginTop="8dp"
@@ -90,14 +90,14 @@
         android:layout_marginTop="32dp"
         android:layout_marginEnd="203dp"
         android:backgroundTint="#FFFFFF"
-        android:onClick="loginCliente"
+        android:onClick="autenticarCliente"
         android:text="@string/entrar"
         android:textColor="@color/black"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.043"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword" />
+        app:layout_constraintTop_toBottomOf="@+id/clienteSenhaLogin" />
 
     <TextView
         android:id="@+id/conta"
