@@ -7,6 +7,9 @@ public class Restaurante {
     public String senha;
     public String nome;
     public ArrayList<String> dias_funcionamento;
+    public ArrayList<String> horario_funcionamento;
+    public Number capacidade_maxima;
+
 
     public String getEmail() {
         return email;
@@ -55,7 +58,4 @@ public class Restaurante {
     public void setCapacidade_maxima(Number capacidade_maxima) {
         this.capacidade_maxima = capacidade_maxima;
     }
-
-    public ArrayList<String> horario_funcionamento;
-    public Number capacidade_maxima;
 }
