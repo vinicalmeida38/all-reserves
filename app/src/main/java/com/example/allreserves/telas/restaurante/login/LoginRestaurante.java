@@ -15,6 +15,7 @@ import android.widget.Toast;
 
 import com.example.allreserves.R;
 import com.example.allreserves.classes.restaurante.Restaurante;
+import com.example.allreserves.telas.restaurante.cadastro.CadastroRestaurante;
 import com.example.allreserves.telas.restaurante.cadastro.CadastroRestaurante2;
 import com.example.allreserves.telas.restaurante.gerenciamento.TelaPropriedades;
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -41,6 +42,11 @@ public class LoginRestaurante extends AppCompatActivity {
     private void acessarPropsRestaurantes(String uid) {
         Intent intent = new Intent(this, TelaPropriedades.class);
         intent.putExtra("uid",uid);
+        startActivity(intent);
+    }
+
+    public void acessarCadastroRestaurante(View view){
+        Intent intent = new Intent(this, CadastroRestaurante.class);
         startActivity(intent);
     }
 

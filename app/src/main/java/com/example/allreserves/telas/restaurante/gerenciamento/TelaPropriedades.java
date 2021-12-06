@@ -1,11 +1,14 @@
 package com.example.allreserves.telas.restaurante.gerenciamento;
 
+import static android.service.controls.ControlsProviderService.TAG;
+
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -29,7 +32,7 @@ public class TelaPropriedades  extends AppCompatActivity{
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.tela_restaurante);
+        setContentView(R.layout.tela_propriedades);
         Bundle dados = getIntent().getExtras();
         uid = dados.getString("uid");
     }
@@ -44,7 +47,7 @@ public class TelaPropriedades  extends AppCompatActivity{
         startActivity(intent);
     }
 
-    public void saveBtn(){
+    public void saveBtn(View view){
         EditText imageLink = (EditText)findViewById(R.id.edtTextImageLink);
         EditText textDesc = (EditText)findViewById(R.id.edtTextDesc);
         TextView nomeRestaurante = (TextView)findViewById(R.id.textViewNomeRestaurante);
@@ -66,9 +69,9 @@ public class TelaPropriedades  extends AppCompatActivity{
                     @Override
                     public void onComplete(@NonNull Task<QuerySnapshot> task) {
                         if (task.isSuccessful()) {
+                            System.out.println("sucesso");
                             for (QueryDocumentSnapshot document : task.getResult()) {
-                                System.out.print(document.getId());
-
+                                Log.d(TAG, document.getId() + " => " + document.getData());
                             }
                         } else {
 

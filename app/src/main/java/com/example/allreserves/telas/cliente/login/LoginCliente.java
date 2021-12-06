@@ -13,7 +13,6 @@ import android.widget.Toast;
 import com.example.allreserves.R;
 import com.example.allreserves.telas.cliente.cadastro.CadastroCliente;
 import com.example.allreserves.telas.cliente.listagem.restaurantes.ListaRestaurantes;
-import com.example.allreserves.telas.restaurante.login.LoginRestaurante;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
