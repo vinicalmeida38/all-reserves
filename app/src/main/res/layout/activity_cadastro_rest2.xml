@@ -32,7 +32,7 @@
         android:text="Nome do restaurante"
         android:textColor="@color/white"
         android:textSize="16dp"
-        app:layout_constraintBottom_toTopOf="@+id/editText7"
+        app:layout_constraintBottom_toTopOf="@+id/restNome"
         app:layout_constraintEnd_toStartOf="@+id/guideline39"
         app:layout_constraintHorizontal_bias="0.137"
         app:layout_constraintStart_toStartOf="@+id/guideline38"
@@ -40,7 +40,7 @@
         app:layout_constraintVertical_bias="0.625" />
 
     <EditText
-        android:id="@+id/editText7"
+        android:id="@+id/restNome"
         android:layout_width="313dp"
         android:layout_height="45dp"
         android:background="@color/white"
@@ -60,15 +60,14 @@
         app:layout_constraintTop_toTopOf="@+id/guideline42" />
 
     <EditText
-        android:id="@+id/editText3"
-        android:layout_width="313dp"
-        android:layout_height="45dp"
+        android:id="@+id/restCapacidadeMax"
+        android:layout_width="153dp"
+        android:layout_height="40dp"
         android:background="@color/white"
         android:inputType="number"
-        app:layout_constraintBottom_toTopOf="@+id/guideline53"
+
         app:layout_constraintEnd_toStartOf="@+id/guideline39"
-        app:layout_constraintStart_toStartOf="@+id/guideline38"
-        app:layout_constraintTop_toTopOf="@+id/guideline52" />
+        app:layout_constraintTop_toBottomOf="@+id/cbAlmoco" />
 
     <TextView
         android:id="@+id/textView5"
@@ -105,8 +104,7 @@
         android:textColor="@color/white"
         android:textSize="16dp"
         app:layout_constraintBottom_toTopOf="@+id/guideline52"
-        app:layout_constraintEnd_toStartOf="@+id/guideline39"
-        app:layout_constraintHorizontal_bias="0.135"
+        app:layout_constraintEnd_toStartOf="@+id/restCapacidadeMax"
         app:layout_constraintStart_toStartOf="@+id/guideline38"
         app:layout_constraintTop_toTopOf="@+id/guideline51"
         app:layout_constraintVertical_bias="1.0" />
@@ -123,23 +121,25 @@
         app:layout_constraintEnd_toStartOf="@+id/guideline39"
         app:layout_constraintHorizontal_bias="0.099"
         app:layout_constraintStart_toStartOf="@+id/guideline38"
-        app:layout_constraintTop_toBottomOf="@+id/editText7"
+        app:layout_constraintTop_toBottomOf="@+id/restNome"
         app:layout_constraintVertical_bias="0.444" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/btnCadastrarRestaurante"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
         android:backgroundTint="@color/white"
+        android:onClick="cadastrarRestaurante"
         android:text="Cadastrar"
         android:textColor="@color/black"
-        app:layout_constraintBottom_toTopOf="@+id/guideline54"
         app:layout_constraintEnd_toStartOf="@+id/guideline39"
+        app:layout_constraintHorizontal_bias="0.492"
         app:layout_constraintStart_toStartOf="@+id/guideline38"
-        app:layout_constraintTop_toTopOf="@+id/guideline53" />
+        app:layout_constraintTop_toBottomOf="@+id/restCapacidadeMax" />
 
     <CheckBox
-        android:id="@+id/checkBox"
+        android:id="@+id/cbSexta"
         android:layout_width="113dp"
         android:layout_height="36dp"
         android:layout_marginEnd="108dp"
@@ -153,19 +153,19 @@
         app:layout_constraintVertical_bias="0.4" />
 
     <CheckBox
-        android:id="@+id/checkBox7"
+        android:id="@+id/cbDomingo"
         android:layout_width="120dp"
         android:layout_height="36dp"
         android:text="Domingo"
         android:textColor="@color/white"
-        app:layout_constraintBottom_toTopOf="@+id/checkBox3"
-        app:layout_constraintEnd_toEndOf="@+id/checkBox9"
+        app:layout_constraintBottom_toTopOf="@+id/cbSegunda"
+        app:layout_constraintEnd_toEndOf="@+id/cbSabado"
         app:layout_constraintHorizontal_bias="0.118"
         app:layout_constraintStart_toStartOf="@+id/guideline38"
         app:layout_constraintTop_toTopOf="@+id/guideline45" />
 
     <CheckBox
-        android:id="@+id/checkBox8"
+        android:id="@+id/cbCafeManha"
         android:layout_width="113dp"
         android:layout_height="36dp"
         android:text="Café da manhã"
@@ -178,7 +178,7 @@
         app:layout_constraintVertical_bias="0.444" />
 
     <CheckBox
-        android:id="@+id/checkBox9"
+        android:id="@+id/cbSabado"
         android:layout_width="113dp"
         android:layout_height="36dp"
         android:layout_marginTop="8dp"
@@ -191,7 +191,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView5" />
 
     <CheckBox
-        android:id="@+id/checkBox2"
+        android:id="@+id/cbAlmoco"
         android:layout_width="113dp"
         android:layout_height="36dp"
         android:text="Almoço"
@@ -203,7 +203,7 @@
         app:layout_constraintTop_toTopOf="@+id/guideline50" />
 
     <CheckBox
-        android:id="@+id/checkBox10"
+        android:id="@+id/cbJantar"
         android:layout_width="113dp"
         android:layout_height="36dp"
         android:text="Jantar"
@@ -215,19 +215,19 @@
         app:layout_constraintTop_toTopOf="@+id/guideline49" />
 
     <CheckBox
-        android:id="@+id/checkBox3"
+        android:id="@+id/cbSegunda"
         android:layout_width="120dp"
         android:layout_height="36dp"
         android:text="Segunda-feira"
         android:textColor="@color/white"
-        app:layout_constraintBottom_toTopOf="@+id/checkBox4"
+        app:layout_constraintBottom_toTopOf="@+id/cbTerca"
         app:layout_constraintEnd_toStartOf="@+id/guideline39"
         app:layout_constraintHorizontal_bias="0.118"
         app:layout_constraintStart_toStartOf="@+id/guideline38"
         app:layout_constraintTop_toTopOf="@+id/guideline46" />
 
     <CheckBox
-        android:id="@+id/checkBox4"
+        android:id="@+id/cbTerca"
         android:layout_width="120dp"
         android:layout_height="36dp"
         android:text="Terça-feira"
@@ -239,29 +239,29 @@
         app:layout_constraintTop_toTopOf="@+id/guideline47" />
 
     <CheckBox
-        android:id="@+id/checkBox5"
+        android:id="@+id/cbQuarta"
         android:layout_width="113dp"
         android:layout_height="36dp"
         android:text="Quarta-feira"
         android:textColor="@color/white"
         app:layout_constraintBottom_toTopOf="@+id/guideline46"
-        app:layout_constraintEnd_toEndOf="@+id/checkBox9"
+        app:layout_constraintEnd_toEndOf="@+id/cbSabado"
         app:layout_constraintHorizontal_bias="0.58"
         app:layout_constraintStart_toStartOf="@+id/guideline38"
         app:layout_constraintTop_toBottomOf="@+id/textView5"
         app:layout_constraintVertical_bias="1.0" />
 
     <CheckBox
-        android:id="@+id/checkBox6"
+        android:id="@+id/cbQuinta"
         android:layout_width="113dp"
         android:layout_height="36dp"
         android:text="Quinta-feira"
         android:textColor="@color/white"
-        app:layout_constraintBottom_toTopOf="@+id/checkBox"
+        app:layout_constraintBottom_toTopOf="@+id/cbSexta"
         app:layout_constraintEnd_toStartOf="@+id/guideline39"
         app:layout_constraintHorizontal_bias="0.576"
         app:layout_constraintStart_toStartOf="@+id/guideline38"
-        app:layout_constraintTop_toBottomOf="@+id/checkBox5" />
+        app:layout_constraintTop_toBottomOf="@+id/cbQuarta" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline38"

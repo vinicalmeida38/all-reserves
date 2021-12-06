@@ -68,6 +68,8 @@
         android:layout_width="307dp"
         android:layout_height="55dp"
         android:text="Reservar"
+        android:backgroundTint="@color/white"
+        android:textColor="@color/black"
         app:layout_constraintBottom_toTopOf="@+id/guideline16"
         app:layout_constraintEnd_toStartOf="@+id/guideline14"
         app:layout_constraintStart_toStartOf="@+id/guideline13"

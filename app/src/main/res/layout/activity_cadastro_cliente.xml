@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".telas.restaurante.cadastro.CadastroRestaurante"
+    tools:context=".telas.cliente.cadastro.CadastroCliente"
     android:background="#2F2F2F">
 
     <androidx.constraintlayout.widget.Guideline
@@ -80,7 +80,7 @@
         app:layout_constraintHorizontal_bias="0.182"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText8" />
+        app:layout_constraintTop_toBottomOf="@+id/restEmail" />
 
     <TextView
         android:id="@+id/textView21"
@@ -93,7 +93,7 @@
         app:layout_constraintHorizontal_bias="0.155"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText" />
+        app:layout_constraintTop_toBottomOf="@+id/restSenha" />
 
     <TextView
         android:id="@+id/textView22"
@@ -106,7 +106,7 @@
         app:layout_constraintHorizontal_bias="0.157"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText9" />
+        app:layout_constraintTop_toBottomOf="@+id/clienteEmail" />
 
     <TextView
         android:id="@+id/textView2"
@@ -139,7 +139,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
     <EditText
-        android:id="@+id/editText8"
+        android:id="@+id/restEmail"
         android:layout_width="305dp"
         android:layout_height="49dp"
         android:layout_marginTop="4dp"
@@ -150,7 +150,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView19" />
 
     <EditText
-        android:id="@+id/editText"
+        android:id="@+id/restSenha"
         android:layout_width="305dp"
         android:layout_height="49dp"
         android:layout_marginTop="4dp"
@@ -161,7 +161,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <EditText
-        android:id="@+id/editText9"
+        android:id="@+id/clienteEmail"
         android:layout_width="305dp"
         android:layout_height="49dp"
         android:layout_marginTop="4dp"
@@ -172,7 +172,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView21" />
 
     <EditText
-        android:id="@+id/editText10"
+        android:id="@+id/clienteSenha"
         android:layout_width="305dp"
         android:layout_height="49dp"
         android:layout_marginTop="4dp"
@@ -183,18 +183,18 @@
         app:layout_constraintTop_toBottomOf="@+id/textView22" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/btnContinuarCadastro"
         android:layout_width="305dp"
         android:layout_height="63dp"
         android:layout_marginTop="220dp"
         android:backgroundTint="#FFFFFF"
-        android:onClick="continuarCadastro"
+        android:onClick="cadastrarCliente"
         android:text="Cadastrar"
         android:textColor="#000000"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.528"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText"
+        app:layout_constraintTop_toBottomOf="@+id/restSenha"
         tools:ignore="MissingConstraints" />
 
     <androidx.constraintlayout.widget.Guideline
