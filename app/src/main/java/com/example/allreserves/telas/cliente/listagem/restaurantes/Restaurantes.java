@@ -2,7 +2,6 @@ package com.example.allreserves.telas.cliente.listagem.restaurantes;
 
 import static android.service.controls.ControlsProviderService.TAG;
 
-import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -18,8 +17,7 @@ import android.view.ViewGroup;
 
 import com.example.allreserves.R;
 import com.example.allreserves.classes.restaurante.ListaRestaurante;
-import com.example.allreserves.classes.restaurante.Restaurante;
-import com.example.allreserves.telas.cliente.listagem.RecyclerAdapter;
+import com.example.allreserves.telas.cliente.listagem.adapters.RecyclerAdapter;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.firestore.FirebaseFirestore;

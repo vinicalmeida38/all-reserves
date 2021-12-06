@@ -1,4 +1,4 @@
-package com.example.allreserves.telas.cliente.listagem;
+package com.example.allreserves.telas.cliente.listagem.adapters;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
