@@ -29,6 +29,7 @@ import java.text.ParseException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.*;
 
 public class CadastroRestaurante2 extends AppCompatActivity {
     private EditText restNome;
@@ -41,7 +42,7 @@ public class CadastroRestaurante2 extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_cadastro_rest2);
+        setContentView(R.layout.activity_cadastro_restaurante2);
         Bundle dados = getIntent().getExtras();
 
         restNome = findViewById(R.id.restNome);
