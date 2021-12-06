@@ -5,6 +5,7 @@ import static android.service.controls.ControlsProviderService.TAG;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -14,6 +15,8 @@ import android.widget.Toast;
 
 import com.example.allreserves.R;
 import com.example.allreserves.classes.restaurante.Restaurante;
+import com.example.allreserves.telas.cliente.cadastro.CadastroCliente;
+import com.example.allreserves.telas.restaurante.login.LoginRestaurante;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
@@ -77,6 +80,11 @@ public class CadastroRestaurante2 extends AppCompatActivity {
         criarRestaurante(restaurante);
     }
 
+    private void acessarLoginRestaurante(){
+        Intent intent = new Intent(this, LoginRestaurante.class);
+        startActivity(intent);
+    }
+
     private void criarRestaurante (Restaurante restaurante){
         FirebaseFirestore db = FirebaseFirestore.getInstance();
         Map<String, Object> hashRestaurante = new HashMap<>();
@@ -105,6 +113,9 @@ public class CadastroRestaurante2 extends AppCompatActivity {
                                         @Override
                                         public void onSuccess(DocumentReference documentReference) {
                                             Log.d(TAG, "DocumentSnapshot added with ID: " + documentReference.getId());
+                                            Toast.makeText(CadastroRestaurante2.this, "Cadastro realizado com sucesso.",
+                                                    Toast.LENGTH_SHORT).show();
+                                            acessarLoginRestaurante();
                                         }
                                     })
                                     .addOnFailureListener(new OnFailureListener() {
