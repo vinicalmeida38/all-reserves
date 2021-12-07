@@ -9,7 +9,7 @@
     tools:context=".telas.main.MainActivity">
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/resultImagem"
         android:layout_width="277dp"
         android:layout_height="238dp"
         android:layout_marginTop="4dp"
@@ -29,7 +29,7 @@
         android:textColor="@color/white"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+        app:layout_constraintTop_toBottomOf="@+id/resultImagem" />
 
     <Button
         android:id="@+id/button01"

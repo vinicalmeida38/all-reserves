@@ -5,4 +5,9 @@
     android:layout_height="match_parent"
     android:background="#2F2F2F"
     tools:context=".telas.cliente.listagem.reservas.MinhasReservas">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
 </LinearLayout>

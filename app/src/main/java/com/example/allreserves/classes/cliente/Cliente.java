@@ -5,6 +5,7 @@ public class Cliente {
     public String email;
     protected String senha;
     public String documento;
+    public String uid;
 
     public String getNome() {
         return nome;
@@ -36,5 +37,13 @@ public class Cliente {
 
     public void setDocumento(String documento) {
         this.documento = documento;
+    }
+
+    public String getUid() {
+        return uid;
+    }
+
+    public void setUid(String uuid) {
+        this.uid = uuid;
     }
 }

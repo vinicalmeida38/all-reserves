@@ -35,7 +35,7 @@ import java.util.Map;
 import java.util.*;
 
 public class CadastroRestaurante2 extends AppCompatActivity {
-    private EditText restNome;
+    private EditText restNome, restImagens;
     private CheckBox cbDomingo, cbSegunda, cbTerca, cbQuarta, cbQuinta, cbSexta, cbSabado;
     private CheckBox cbCafeManha, cbAlmoco, cbJantar;
     private EditText restCapacidadeMax;
@@ -49,6 +49,7 @@ public class CadastroRestaurante2 extends AppCompatActivity {
         Bundle dados = getIntent().getExtras();
 
         restNome = findViewById(R.id.restNome);
+        restImagens = findViewById(R.id.restImagens);
         restCapacidadeMax = findViewById(R.id.restCapacidadeMax);
         cbDomingo = findViewById(R.id.cbDomingo);
         cbSegunda = findViewById(R.id.cbSegunda);
@@ -73,6 +74,7 @@ public class CadastroRestaurante2 extends AppCompatActivity {
         restaurante.setNome(restNome.getText().toString());
         restaurante.setEmail(email);
         restaurante.setSenha(senha);
+        restaurante.setImagem(restImagens.getText().toString());
         restaurante.setDias_funcionamento(diasDeFuncionamento(diasSelecionados));
         restaurante.setHorario_funcionamento(horariosDeFuncionamento(horariosSelecionados));
         restaurante.setCapacidade_maxima(NumberFormat.getInstance().parse(restCapacidadeMax.getText().toString()));
@@ -101,6 +103,7 @@ public class CadastroRestaurante2 extends AppCompatActivity {
 
 
                             hashRestaurante.put("nome", restaurante.getNome());
+                            hashRestaurante.put("imagem", restaurante.getImagem());
                             hashRestaurante.put("dias_funcionamento", restaurante.getDias_funcionamento());
                             hashRestaurante.put("horarios_funcionamento", restaurante.horario_funcionamento);
                             hashRestaurante.put("capacidade_maxima", restaurante.capacidade_maxima);
