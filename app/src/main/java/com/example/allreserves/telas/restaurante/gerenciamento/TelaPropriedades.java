@@ -10,8 +10,10 @@ import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.allreserves.R;
+import com.example.allreserves.telas.restaurante.cadastro.CadastroRestaurante2;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.firestore.FirebaseFirestore;
@@ -29,9 +31,11 @@ public class TelaPropriedades  extends AppCompatActivity{
     FirebaseFirestore db = FirebaseFirestore.getInstance();
     private String documentoID;
 
-    String updateImage;
-    String updateDescricao;
-    ArrayList<Boolean> diasFuncionamento = new ArrayList<>();
+    private String updateImage;
+    private ArrayList<Boolean> diasFuncionamento = new ArrayList<>();
+    private CheckBox cbCafeManha, cbAlmoco, cbJantar;
+    private CheckBox cbDomingo, cbSegunda, cbTerca, cbQuarta, cbQuinta, cbSexta, cbSabado;
+    private EditText restCapacidadeMax;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,11 +45,8 @@ public class TelaPropriedades  extends AppCompatActivity{
         Bundle dados = getIntent().getExtras();
         uid = dados.getString("uid");
 
-
         TextView nomeRestaurante = (TextView)findViewById(R.id.textViewNomeRestaurante);
-        TextView descricao = (TextView)findViewById(R.id.edtTextDesc);
         TextView imagem = (TextView)findViewById(R.id.edtTextImageLink);
-        CheckBox cbDomingo, cbSegunda, cbTerca, cbQuarta, cbQuinta, cbSexta, cbSabado;
 
         cbDomingo = findViewById(R.id.cbDomingo);
         cbSegunda = findViewById(R.id.cbSegunda);
@@ -54,63 +55,10 @@ public class TelaPropriedades  extends AppCompatActivity{
         cbQuinta = findViewById(R.id.cbQuinta);
         cbSexta = findViewById(R.id.cbSabado);
         cbSabado = findViewById(R.id.cbSabado);
-
-        db.collection("restaurantes")
-                .whereEqualTo("uid", uid)
-                .get()
-                .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
-                    @Override
-                    public void onComplete(@NonNull Task<QuerySnapshot> task) {
-                        if (task.isSuccessful()) {
-                            for (QueryDocumentSnapshot document : task.getResult()) {
-                                documentoID = document.getId();
-
-                                nomeRestaurante.setText(document.getString("nome"));
-                                descricao.setText(document.getString("descricao"));
-                                updateDescricao = document.getString("descricao");
-                                imagem.setText(document.getString("imagem"));
-                                updateImage = document.getString("imagem");
-
-                                String list = document.getString("dias_funcionamento");
-
-
-                                if(list.contains("DOMINGO")){
-                                    cbDomingo.setChecked(true);
-                                    diasFuncionamento.add(cbDomingo.isChecked());
-                                }
-                                if(list.contains("SEGUNDA")){
-                                    cbSegunda.setChecked(true);
-                                    diasFuncionamento.add(cbSegunda.isChecked());
-                                }
-                                if(list.contains("TERCA")){
-                                    cbTerca.setChecked(true);
-                                    diasFuncionamento.add(cbTerca.isChecked());
-                                }
-                                if(list.contains("QUARTA")){
-                                    cbQuarta.setChecked(true);
-                                    diasFuncionamento.add(cbQuarta.isChecked());
-                                }
-                                if(list.contains("QUINTA")){
-                                    cbQuinta.setChecked(true);
-                                    diasFuncionamento.add(cbQuinta.isChecked());
-                                }
-                                if(list.contains("SEXTA")){
-                                    cbSexta.setChecked(true);
-                                    diasFuncionamento.add(cbSexta.isChecked());
-                                }
-                                if(list.contains("SABADO")){
-                                    cbSabado.setChecked(true);
-                                    diasFuncionamento.add(cbSabado.isChecked());
-                                }
-
-                            }
-                        } else {
-
-                        }
-                    }
-                });
-
-
+        cbCafeManha = findViewById(R.id.cbCafeManha);
+        cbAlmoco = findViewById(R.id.cbAlmoco);
+        cbJantar = findViewById(R.id.cbJantar);
+        restCapacidadeMax = findViewById(R.id.restCapacidadeMax);
     }
 
     public void acessarTelaMain(){
@@ -123,13 +71,97 @@ public class TelaPropriedades  extends AppCompatActivity{
         startActivity(intent);
     }
 
+    private ArrayList verificarDiasSelecionados() {
+        ArrayList<Boolean> diasFuncionamento = new ArrayList<>();
+        diasFuncionamento.add(cbDomingo.isChecked());
+        diasFuncionamento.add(cbSegunda.isChecked());
+        diasFuncionamento.add(cbTerca.isChecked());
+        diasFuncionamento.add(cbQuarta.isChecked());
+        diasFuncionamento.add(cbQuinta.isChecked());
+        diasFuncionamento.add(cbSexta.isChecked());
+        diasFuncionamento.add(cbSabado.isChecked());
+
+        return diasFuncionamento;
+    }
+
+    private ArrayList diasDeFuncionamento(ArrayList<Boolean> diasSelecionados) {
+        ArrayList<String> diasFuncionamento = new ArrayList<>();
+
+        for(int i = 0; i < 7; i++) {
+            if(diasSelecionados.get(i) == true) {
+                switch (i){
+                    case 0:
+                        diasFuncionamento.add("DOMINGO");
+                        break;
+                    case 1:
+                        diasFuncionamento.add("SEGUNDA");
+                        break;
+                    case 2:
+                        diasFuncionamento.add("TERÇA");
+                        break;
+                    case 3:
+                        diasFuncionamento.add("QUARTA");
+                        break;
+                    case 4:
+                        diasFuncionamento.add("QUINTA");
+                        break;
+                    case 5:
+                        diasFuncionamento.add("SEXTA");
+                        break;
+                    case 6:
+                        diasFuncionamento.add("SABADO");
+                        break;
+                    default:
+
+                        break;
+                }
+            }
+        }
+        return diasFuncionamento;
+    }
+
+    private ArrayList verificarHorariosSelecionados() {
+        ArrayList<Boolean> horariosFuncionamento = new ArrayList<>();
+        horariosFuncionamento.add(cbCafeManha.isChecked());
+        horariosFuncionamento.add(cbAlmoco.isChecked());
+        horariosFuncionamento.add(cbJantar.isChecked());
+
+        return horariosFuncionamento;
+    }
+
+    private ArrayList horariosDeFuncionamento(ArrayList<Boolean> horariosSelecionados) {
+        ArrayList<String> horariosFuncionamento = new ArrayList<>();
+
+        for(int i = 0; i < 3; i++) {
+            if(horariosSelecionados.get(i) == true) {
+                switch (i){
+                    case 1:
+                        horariosFuncionamento.add("ALMOÇO");
+                        break;
+                    case 2:
+                        horariosFuncionamento.add("JANTAR");
+                        break;
+                    default:
+                        horariosFuncionamento.add("CAFE_DA_MANHA");
+                        break;
+                }
+            }
+        }
+        return horariosFuncionamento;
+    }
+
+
     public void saveBtn(View view){
+
+        ArrayList<Boolean> diasSelecionados = verificarDiasSelecionados();
+        ArrayList<Boolean> horariosSelecionados = verificarHorariosSelecionados();
 
         db.collection("restaurantes").document(documentoID)
                 .update(
                         "image", updateImage,
-                        "descricao", updateDescricao,
-                        "dias_funcionamento", diasFuncionamento
+                        "dias_funcionamento", diasDeFuncionamento(diasSelecionados),
+                        "horarios_funcionamento", horariosDeFuncionamento(horariosSelecionados),
+                        "capacidade_maxima", restCapacidadeMax.getText().toString()
                 );
 
 
