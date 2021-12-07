@@ -122,6 +122,7 @@
         android:layout_marginTop="12dp"
         android:layout_marginEnd="155dp"
         android:backgroundTint="#FFFFFF"
+        android:onClick="acessarCadastroRestaurante"
         android:text="@string/cadastrar_se"
         android:textColor="@color/black"
         android:textSize="18sp"

@@ -1,5 +1,7 @@
 package com.example.allreserves.classes.restaurante;
 
+import com.example.allreserves.telas.cliente.listagem.restaurantes.Restaurantes;
+
 import java.util.ArrayList;
 
 public class Restaurante {
@@ -9,7 +11,6 @@ public class Restaurante {
     public ArrayList<String> dias_funcionamento;
     public ArrayList<String> horario_funcionamento;
     public Number capacidade_maxima;
-
 
     public String getEmail() {
         return email;
