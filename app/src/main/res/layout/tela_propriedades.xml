@@ -207,7 +207,7 @@
         android:layout_marginStart="15dp"
         android:layout_marginTop="80dp"
         android:layout_marginEnd="281dp"
-        android:text="Descrição"
+        android:text="Capacidade Máxima"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -215,8 +215,8 @@
 
     <EditText
         android:id="@+id/edtTextDesc"
-        android:layout_width="369dp"
-        android:layout_height="134dp"
+        android:layout_width="368dp"
+        android:layout_height="75dp"
         android:layout_marginStart="15dp"
         android:layout_marginTop="10dp"
         android:layout_marginEnd="15dp"
