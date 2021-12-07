@@ -1,3 +1,4 @@
+
 # All-Reserves 
 Refeições seguras.
 ## Objetivo do projeto
@@ -21,3 +22,10 @@ Este aplicativo serve tanto para os usuários que desejam ter suas refeições e
   * Consegue preencher os dias de funcionamento
   * Consegue preencher fotos e informações sobre o restaurante
   * Consegue ser acessado pelos usuários
+
+### INTEGRANTES
+VICTOR
+VINICIUS
+BEATRIZ
+CAIO
+FÁBIO
