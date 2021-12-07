@@ -60,8 +60,6 @@
         android:text="Propriedades"
         android:textColor="#ffffff"
         android:textSize="5pt"
-
-
         app:backgroundTint="#4F4F4F"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"

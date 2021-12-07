@@ -31,7 +31,7 @@ public class TelaRestaurante extends AppCompatActivity{
         setContentView(R.layout.tela_restaurante);
 
         Bundle dados = getIntent().getExtras();
-        uid = dados.getString("uid");
+        //uid = dados.getString("uid");
 
         TextView nomeRestaurante = (TextView)findViewById(R.id.textViewNomeRestaurante);
         TextView descricao = (TextView)findViewById(R.id.text_descricao);
@@ -93,13 +93,17 @@ public class TelaRestaurante extends AppCompatActivity{
     }
 
     public void acessarTelaPropriedades(){
+        int x=0;
         Intent intent = new Intent(this, TelaPropriedades.class);
         // putExtra
+        intent.putExtra("",x);
         startActivity(intent);
     }
     public void acessarTelaReservas(){
+        int x=0;
         Intent intent = new Intent(this, TelaReservas.class);
         // putExtra
+        intent.putExtra("",x);
         startActivity(intent);
     }
 
