@@ -93,13 +93,17 @@ public class TelaRestaurante extends AppCompatActivity{
     }
 
     public void acessarTelaPropriedades(){
+        int x=0;
         Intent intent = new Intent(this, TelaPropriedades.class);
         // putExtra
+        intent.putExtra("",x);
         startActivity(intent);
     }
     public void acessarTelaReservas(){
+        int x=0;
         Intent intent = new Intent(this, TelaReservas.class);
         // putExtra
+        intent.putExtra("",x);
         startActivity(intent);
     }
 

@@ -29,8 +29,6 @@
         android:textSize="5pt"
         android:textColor="#ffffff"
         style="@style/Widget.AppCompat.Button.Borderless"
-
-
         app:backgroundTint="#4F4F4F"
         app:layout_constraintEnd_toStartOf="@+id/button_reservas"
         app:layout_constraintHorizontal_bias="1.0"
@@ -46,7 +44,7 @@
         android:textSize="5pt"
         android:textColor="#ffffff"
         style="@style/Widget.AppCompat.Button.Borderless"
-
+        android:onClick="acessarTelaReservas"
         app:backgroundTint="#4F4F4F"
         app:layout_constraintEnd_toStartOf="@+id/button_propriedades"
         app:layout_constraintStart_toEndOf="@+id/button_pagina"
@@ -61,8 +59,7 @@
         android:textSize="5pt"
         android:textColor="#ffffff"
         style="@style/Widget.AppCompat.Button.Borderless"
-
-
+        android:onClick="acessarTelaPropriedades"
         app:backgroundTint="#4F4F4F"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
