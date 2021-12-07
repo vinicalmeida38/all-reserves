@@ -3,13 +3,15 @@ package com.example.allreserves.classes.restaurante;
 import com.example.allreserves.telas.cliente.listagem.restaurantes.Restaurantes;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class Restaurante {
     public String email;
     public String senha;
     public String nome;
-    public ArrayList<String> dias_funcionamento;
-    public ArrayList<String> horario_funcionamento;
+    public String imagem;
+    public List<String> dias_funcionamento;
+    public List<String> horario_funcionamento;
     public Number capacidade_maxima;
 
     public String getEmail() {
@@ -36,19 +38,27 @@ public class Restaurante {
         this.nome = nome;
     }
 
-    public ArrayList<String> getDias_funcionamento() {
+    public String getImagem() {
+        return imagem;
+    }
+
+    public void setImagem(String imagem) {
+        this.imagem = imagem;
+    }
+
+    public List<String> getDias_funcionamento() {
         return dias_funcionamento;
     }
 
-    public void setDias_funcionamento(ArrayList<String> dias_funcionamento) {
+    public void setDias_funcionamento(List<String> dias_funcionamento) {
         this.dias_funcionamento = dias_funcionamento;
     }
 
-    public ArrayList<String> getHorario_funcionamento() {
+    public List<String> getHorario_funcionamento() {
         return horario_funcionamento;
     }
 
-    public void setHorario_funcionamento(ArrayList<String> horario_funcionamento) {
+    public void setHorario_funcionamento(List<String> horario_funcionamento) {
         this.horario_funcionamento = horario_funcionamento;
     }
 

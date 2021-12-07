@@ -16,6 +16,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.allreserves.R;
+import com.example.allreserves.classes.cliente.Cliente;
 import com.example.allreserves.classes.restaurante.ListaRestaurante;
 import com.example.allreserves.telas.cliente.listagem.adapters.RecyclerAdapter;
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -25,10 +26,13 @@ import com.google.firebase.firestore.QueryDocumentSnapshot;
 import com.google.firebase.firestore.QuerySnapshot;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class Restaurantes extends Fragment {
     private ArrayList<ListaRestaurante> listaRestaurantes;
     private RecyclerView recyclerView;
+    String nomeRest, imagemRest, uidRest;
+    Number capacidadeMaxRest;
     FirebaseFirestore db = FirebaseFirestore.getInstance();
 
     @Override
@@ -59,7 +63,14 @@ public class Restaurantes extends Fragment {
                         if (task.isSuccessful()) {
                             for (QueryDocumentSnapshot document : task.getResult()) {
                                 Log.d(TAG, document.getId() + " => " + document.getData());
-                                listaRestaurantes.add(new ListaRestaurante(document.getString("nome")));
+                                nomeRest = document.getString("nome");
+                                imagemRest = document.getString("imagem");
+                                capacidadeMaxRest = document.getLong("capacidade_maxima");
+                                uidRest = document.getString("uid");
+                                List<String> diasFuncionamentoRest = (List<String>) document.get("dias_funcionamento");
+                                List<String> horarioFuncionamentoRest = (List<String>) document.get("horarios_funcionamento");
+
+                                listaRestaurantes.add(new ListaRestaurante(nomeRest, imagemRest, capacidadeMaxRest, diasFuncionamentoRest, horarioFuncionamentoRest, uidRest));
                             }
                             setAdapter(listaRestaurantes);
                         } else {
